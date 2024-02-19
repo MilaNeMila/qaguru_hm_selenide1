@@ -12,9 +12,7 @@ public class Test6hm_hover extends TestBaseGit {
         open("");
         $$(".HeaderMenu-link").filterBy(text("Solutions")).first().hover();
         $(byText("Enterprise")).click();
-        $("#hero-section-brand-heading")
-                .shouldHave(text("The AI-powered\n" +
-                        "developer platform."))
-                .shouldBe(visible);
+        $("#hero-section-brand-heading").shouldHave(text("The AI-powered\n" +"developer platform."))
+            .shouldBe(visible);
     }
 }
