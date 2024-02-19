@@ -9,6 +9,8 @@ public class Test6hm_drop {
     @Test
     void test(){
         open("https://the-internet.herokuapp.com/drag_and_drop");
+        $("#column-a").$("header").shouldHave(text("A"));
+        $("#column-b").$("header").shouldHave(text("B"));
         actions().moveToElement($("#column-a")).clickAndHold().moveByOffset(200, 0).release().perform();
         $("#column-a").shouldHave(text("B"));
         $("#column-b").shouldHave(text("A"));
@@ -17,6 +19,8 @@ public class Test6hm_drop {
     @Test
     void testDragAndDrop(){
         open("https://the-internet.herokuapp.com/drag_and_drop");
+        $("#column-a").$("header").shouldHave(text("A"));
+        $("#column-b").$("header").shouldHave(text("B"));
         $("#column-a").dragAndDrop(to("#column-b"));
         $("#column-a").shouldHave(text("B"));
         $("#column-b").shouldHave(text("A"));
