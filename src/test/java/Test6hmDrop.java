@@ -4,10 +4,10 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.DragAndDropOptions.to;
 import static com.codeborne.selenide.Selenide.*;
 
-public class Test6hm_drop {
+public class Test6hmDrop {
 
     @Test
-    void test(){
+    void moveElementWithActionsTest(){
         open("https://the-internet.herokuapp.com/drag_and_drop");
         $("#column-a").$("header").shouldHave(text("A"));
         $("#column-b").$("header").shouldHave(text("B"));
@@ -17,7 +17,7 @@ public class Test6hm_drop {
     }
 
     @Test
-    void testDragAndDrop(){
+    void moveElementWithDragAndDropTest(){
         open("https://the-internet.herokuapp.com/drag_and_drop");
         $("#column-a").$("header").shouldHave(text("A"));
         $("#column-b").$("header").shouldHave(text("B"));
